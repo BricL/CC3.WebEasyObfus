@@ -1,0 +1,1 @@
+{"version":3,"file":"unit-test-interface.d.ts","sourceRoot":"","sources":["../../../../../source/script/3d/manager/unit-test/unit-test-interface.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,mCAAmC,CAAC;AAE5E,UAAU,SAAS;IACf,IAAI,CAAC,SAAS,EAAE,kBAAkB,GAAG,OAAO,CAAC,OAAO,CAAC,CAAC;IACtD,KAAK,IAAI,OAAO,CAAC,OAAO,CAAC,CAAC;CAC7B;AAED,OAAO,EAAE,SAAS,EAAE,CAAC"}

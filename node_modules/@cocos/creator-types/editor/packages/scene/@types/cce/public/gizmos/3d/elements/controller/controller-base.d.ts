@@ -1,0 +1,107 @@
+import { Color, Node, Quat, Vec2, Vec3 } from 'cc';
+import { IControlMouseEvent, IHandleData } from '../../../defines';
+declare class ControllerBase {
+    get is2D(): boolean;
+    get scale2D(): number;
+    get updated(): boolean;
+    get visible(): boolean | undefined;
+    shape: Node | null;
+    /** 如果 controller 锁死将不再响应拖拽 */
+    isLock: boolean;
+    onControllerMouseDown?(event: IControlMouseEvent): void;
+    onControllerMouseMove?(event: IControlMouseEvent): void;
+    onControllerMouseUp?(event: IControlMouseEvent): void;
+    onControllerHoverIn?(event: IControlMouseEvent): void;
+    onControllerHoverOut?(event: IControlMouseEvent): void;
+    get isMouseDown(): boolean;
+    protected _updated: boolean;
+    protected _scale: Vec3;
+    protected _localRot: Quat;
+    protected _localPos: Vec3;
+    protected _rootNode: Node | null;
+    protected _baseDist: number;
+    protected _handleDataMap: {
+        [key: string]: IHandleData;
+    };
+    protected _twoPI: number;
+    protected _halfPI: number;
+    protected _degreeToRadianFactor: number;
+    protected _eventsRegistered: boolean;
+    protected _isMouseDown: boolean;
+    protected _color: Color;
+    protected _lockSize: boolean;
+    private _onDimensionChanged;
+    private _onScale2DChanged;
+    private _onCameraProjectionChanged;
+    private _onCameraFovChanged;
+    private _onCameraOrthoHeightChanged;
+    private _mouseDownFuncs;
+    private _mouseMoveFuncs;
+    private _mouseUpFuncs;
+    private _mouseLeaveFuncs;
+    private _hoverInFuncs;
+    private _hoverOutFuncs;
+    constructor(rootNode: Node);
+    set lockSize(value: boolean);
+    /**
+     * 更改控制器所依附的根节点
+     * @param rootNode
+     */
+    setRoot(rootNode: Node): void;
+    createShapeNode(name: string): void;
+    registerEvents(): void;
+    unregisterEvents(): void;
+    registerCameraMovedEvent(): void;
+    unregisterCameraMoveEvent(): void;
+    registerCameraFovChangedEvent(): void;
+    registerOrthoHeightChangedEvent(): void;
+    unregisterCameraFovChangedEvent(): void;
+    unregisterOrthoHeightChangedEvent(): void;
+    onEditorCameraMoved(): void;
+    initHandle(node: Node, handleName: string): IHandleData;
+    removeHandle(handleName: string): void;
+    setHandleColor(handleName: string, color: Color, opacity?: number): void;
+    resetHandleColor(): void;
+    registerMouseEvents(node: Node, controlName: string): void;
+    unregisterMouseEvent(node: Node, controlName: string): void;
+    setPosition(value: Readonly<Vec3>): void;
+    getPosition(out?: Vec3): Vec3;
+    getWorldPosition(out?: Vec3): Vec3;
+    getWorldPositionForNode(source?: Node | null, out?: Vec3): Vec3;
+    setRotation(value: Readonly<Quat>): void;
+    getRotation(out?: Quat): Quat;
+    getScale(): Vec3;
+    setScale(value: Vec3): void;
+    updateController(): void;
+    getCameraDistScalar(pos: Vec3): number;
+    protected getDistScalarInOrtho(): number;
+    protected isCameraInOrtho(): boolean;
+    getDistScalar(node?: Node): number;
+    adjustControllerSize(): void;
+    needRender(node: Node): boolean;
+    getRendererNodes(node: Node): Node[];
+    getRayDetectNodes(node: Node): Node[];
+    localToWorldPosition(localPos: Vec3): any;
+    localToWorldDir(localDir: Vec3): Vec3;
+    worldPosToScreenPos(worldPos: Vec3): Vec3;
+    getScreenPos(localPos: Vec3): Vec3;
+    getAlignAxisMoveDistance(axisWorldDir: Vec3, deltaPos: Vec2): number;
+    getPositionOnPanPlane(hitPos: Vec3, x: number, y: number, panPlane: Node): boolean;
+    show(): void;
+    hide(): void;
+    onCameraFovChanged?: (fov: number) => void;
+    onDimensionChanged(): void;
+    onScale2DChanged(): void;
+    onCameraProjectionChanged(projection: number): void;
+    onCameraOrthoHeightChanged(): void;
+    protected onMouseDown?(event: IControlMouseEvent): void;
+    protected onMouseMove?(event: IControlMouseEvent): void;
+    protected onMouseUp?(event: IControlMouseEvent): void;
+    protected onMouseLeave?(event: IControlMouseEvent): void;
+    protected onHoverIn?(event: IControlMouseEvent): void;
+    protected onHoverOut?(event: IControlMouseEvent): void;
+    protected onShow?(): void;
+    protected onHide?(): void;
+}
+export default ControllerBase;
+//# sourceMappingURL=controller-base.d.ts.map

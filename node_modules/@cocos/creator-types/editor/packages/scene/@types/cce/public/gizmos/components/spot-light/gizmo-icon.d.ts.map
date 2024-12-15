@@ -1,0 +1,1 @@
+{"version":3,"file":"gizmo-icon.d.ts","sourceRoot":"","sources":["../../../../../../source/script/public/gizmos/components/spot-light/gizmo-icon.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,IAAI,CAAC;AACpC,OAAO,EAAE,SAAS,EAAE,MAAM,SAAS,CAAC;AAEpC,cAAM,kBAAmB,SAAQ,SAAS,CAAC,SAAS,CAAC;IACjD,iBAAiB,UAAQ;IACzB,gBAAgB;IAKhB,gBAAgB;CAmBnB;AAED,eAAe,kBAAkB,CAAC"}

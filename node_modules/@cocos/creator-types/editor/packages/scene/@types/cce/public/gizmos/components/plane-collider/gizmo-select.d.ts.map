@@ -1,0 +1,1 @@
+{"version":3,"file":"gizmo-select.d.ts","sourceRoot":"","sources":["../../../../../../source/script/public/gizmos/components/plane-collider/gizmo-select.ts"],"names":[],"mappings":"AAIA,OAAO,EAAE,WAAW,EAAE,MAAM,SAAS,CAAC;AAOtC,cAAM,kBAAmB,SAAQ,WAAW;IAExC,OAAO,CAAC,WAAW,CAAmB;IAEtC,IAAI;IAIJ,MAAM;IAKN,MAAM;IAIN,oBAAoB;IAsBpB,cAAc;IAId,aAAa;CAGhB;AAED,eAAe,kBAAkB,CAAC"}

@@ -1,0 +1,42 @@
+import EditableController from './editable-controller';
+import { IControlMouseEvent } from '../../../defines';
+import { Node, Vec3, Color } from 'cc';
+declare class ParticleSystemConeController extends EditableController {
+    private _oriDir;
+    private _center;
+    private _radius;
+    private _height;
+    private _bottomRadius;
+    private _deltaRadius;
+    private _deltaHeight;
+    private _deltaBottomRadius;
+    private _coneLineNode;
+    private _circleNode;
+    private _bottomCircleNode;
+    private _circleFromDir;
+    private _coneLineMR;
+    private _circleMR;
+    private _bottomCircleMR;
+    private _mouseDeltaPos;
+    private _curDistScalar;
+    private _axisDir;
+    constructor(rootNode: Node);
+    get radius(): number;
+    set radius(value: number);
+    get height(): number;
+    set height(value: number);
+    setColor(color: Color): void;
+    _updateEditHandle(axisName: string): void;
+    initShape(): void;
+    getConeLineData(): import("../../../defines").IMeshPrimitive;
+    updateSize(center: Vec3, radius: number, height: number, bottomRadius: number): void;
+    onMouseDown(event: IControlMouseEvent): void;
+    onMouseMove(event: IControlMouseEvent): void;
+    onMouseUp(event: IControlMouseEvent): void;
+    onMouseLeave(event: IControlMouseEvent): void;
+    getDeltaRadius(): number;
+    getDeltaHeight(): number;
+    getDeltaBottomRadius(): number;
+}
+export default ParticleSystemConeController;
+//# sourceMappingURL=particlesystem-cone-controller.d.ts.map

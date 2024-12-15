@@ -1,0 +1,1 @@
+{"version":3,"file":"ipc.d.ts","sourceRoot":"","sources":["../../../../../../source/script/3d/manager/ipc/web/ipc.ts"],"names":[],"mappings":"AAEA,OAAO,GAAG,MAAM,WAAW,CAAC;AAE5B,MAAM,MAAM,YAAY,GAAG;IACvB,OAAO,EAAE,MAAM,IAAI,CAAC;IACpB,UAAU,EAAE,MAAM,IAAI,CAAC;CAC1B,GAAG,OAAO,GAAG,CAAC;AAMf,QAAA,MAAM,SAAS,EAAE,YAAkB,CAAC;AAqBpC;;GAEG;AACH,wBAAgB,OAAO,SAItB;AAsID,eAAe,SAAS,CAAC"}

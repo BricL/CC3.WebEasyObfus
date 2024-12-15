@@ -1,0 +1,56 @@
+import { ParticleSystem, Vec3 } from 'cc';
+import BoxController from '../controller/box-controller';
+import CircleController from '../controller/circle-controller';
+import HemisphereController from '../controller/hemisphere-controller';
+import ConeController from '../controller/particlesystem-cone-controller';
+import SphereController from '../controller/sphere-controller';
+import Gizmo from '../gizmo-base';
+declare class ParticleSystemComponentGizmo extends Gizmo {
+    private _curEmitterShape;
+    private _shapeControllers;
+    private _PSGizmoColor;
+    private _activeController;
+    private _pSGizmoRoot;
+    private _boundingBoxController;
+    private _scale;
+    private _size;
+    private _radius;
+    private _arc;
+    private _coneHeight;
+    private _coneAngle;
+    private _bottomRadius;
+    private _bbHalfSize;
+    init(): void;
+    createController(): void;
+    onShow(): void;
+    onHide(): void;
+    createControllerByShape(shape: any): BoxController | CircleController | HemisphereController | ConeController | SphereController | null;
+    getControllerByShape(shape: any): any;
+    getConeData(psComp: ParticleSystem): {
+        topRadius: number;
+        height: number;
+        bottomRadius: number;
+        coneAngle: number;
+    };
+    modifyConeData(psComp: ParticleSystem, deltaTopRadius: number, deltaHeight: number, deltaBottomRadius: number): void;
+    setCurveRangeInitValue(curve: any, value: any): void;
+    onControllerMouseDown(): void;
+    onControllerMouseMove(): void;
+    onControllerMouseUp(): void;
+    getScaledDeltaRadius(deltaRadius: number, controlDir: Vec3, scale: Vec3): number;
+    updateDataFromController(): void;
+    updateControllerTransform(): void;
+    getConeRadius(angle: number, height: number): number;
+    updateControllerData(): void;
+    onTargetUpdate(): void;
+    onNodeChanged(): void;
+    updateDataFromBBController(): void;
+    updateBBControllerData(): void;
+    onBBControllerMouseDown(): void;
+    onBBControllerMouseMove(): void;
+    onBBControllerMouseUp(): void;
+    showBoundingBox(isShow: boolean): void;
+    isShowBoundingBox(): any;
+}
+export default ParticleSystemComponentGizmo;
+//# sourceMappingURL=particle-system-component-gizmo.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"uuid-array.d.ts","sourceRoot":"","sources":["../../../../source/script/public/selection/uuid-array.ts"],"names":[],"mappings":"AAEA,cAAM,SAAS;IACJ,KAAK,EAAE,MAAM,EAAE,CAAM;;IAG5B,GAAG,CAAC,IAAI,EAAE,MAAM;IAShB,MAAM,CAAC,IAAI,EAAE,MAAM;IASnB,OAAO,CAAC,OAAO,EAAE,GAAG;IAIpB,KAAK;IAKL,OAAO,CAAC,IAAI,EAAE,MAAM;IAIpB,IAAI;IAIJ,KAAK;CAGR;AAED,eAAe,SAAS,CAAC"}

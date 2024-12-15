@@ -1,0 +1,1 @@
+{"version":3,"file":"asset.d.ts","sourceRoot":"","sources":["../../../source/editor-extends/manager/asset.ts"],"names":[],"mappings":"AAIA,MAAM,CAAC,OAAO,OAAO,YAAY;IAE7B;;;;OAIG;IACI,cAAc,CAAC,IAAI,EAAE,MAAM,EAAE,QAAQ,EAAE,QAAQ;IActD;;;;OAIG;IACI,mBAAmB,CAAC,GAAG,EAAE,MAAM;CAgBzC"}

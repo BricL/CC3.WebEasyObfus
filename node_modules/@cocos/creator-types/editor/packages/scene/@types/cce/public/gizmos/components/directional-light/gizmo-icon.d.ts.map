@@ -1,0 +1,1 @@
+{"version":3,"file":"gizmo-icon.d.ts","sourceRoot":"","sources":["../../../../../../source/script/public/gizmos/components/directional-light/gizmo-icon.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,IAAI,CAAC;AACtC,OAAO,EAAE,SAAS,EAAE,MAAM,SAAS,CAAC;AAEpC,cAAM,yBAA0B,SAAQ,SAAS,CAAC,gBAAgB,CAAC;IAC/D,iBAAiB,UAAQ;IACzB,gBAAgB;CAInB;AAED,eAAe,yBAAyB,CAAC"}

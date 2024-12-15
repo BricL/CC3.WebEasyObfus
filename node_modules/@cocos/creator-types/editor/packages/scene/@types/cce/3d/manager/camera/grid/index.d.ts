@@ -1,0 +1,42 @@
+import LinearTicks from './linear-ticks';
+declare class Grid {
+    private _canvasWidth;
+    private _canvasHeight;
+    hTicks: LinearTicks | null;
+    xAxisScale: number;
+    xAxisOffset: number;
+    xAnchor: number;
+    vTicks: LinearTicks | null;
+    yAxisScale: number;
+    yAxisOffset: number;
+    yAnchor: number;
+    private _xAnchorOffset;
+    private _yAnchorOffset;
+    pixelToValueH: Function | null;
+    valueToPixelH: Function | null;
+    pixelToValueV: Function | null;
+    valueToPixelV: Function | null;
+    xDirection: number;
+    yDirection: number;
+    xMinRange: number | null;
+    xMaxRange: number | null;
+    yMinRange: number | null;
+    yMaxRange: number | null;
+    constructor(canvasWidth: number, canvasHeight: number);
+    setAnchor(x: number, y: number): void;
+    setScaleH(lods: number[], minScale: number, maxScale: number): void;
+    setMappingH(minValue: number, maxValue: number, pixelRange: number): void;
+    setScaleV(lods: number[], minScale: number, maxScale: number): void;
+    setMappingV(minValue: number, maxValue: number, pixelRange: number): void;
+    pan(deltaPixelX: number, deltaPixelY: number): void;
+    panX(deltaPixelX: number): void;
+    panY(deltaPixelY: number): void;
+    xAxisScaleAt(pixelX: number, scale: number): void;
+    yAxisScaleAt(pixelY: number, scale: number): void;
+    xAxisSync(x: number, scaleX: number): void;
+    yAxisSync(y: number, scaleY: number): void;
+    resize(w: number, h: number): void;
+    updateRange(): void;
+}
+export default Grid;
+//# sourceMappingURL=index.d.ts.map

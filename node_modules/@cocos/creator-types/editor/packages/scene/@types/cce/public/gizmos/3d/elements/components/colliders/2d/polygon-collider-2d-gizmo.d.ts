@@ -1,0 +1,44 @@
+import GizmoBase from '../../../gizmo-base';
+import { Vec3 } from 'cc';
+import { IPolygonHandleData } from '../../../controller/polygon-controller';
+import { IControlMouseEvent } from '../../../../../../../../script/public/gizmos/defines';
+import { ISceneKeyboardEvent } from '../../../../../../../../../@types/private';
+declare class PolygonCollider2DGizmo extends GizmoBase {
+    private _controller;
+    private _leftDeleteLine;
+    private _rightDeleteLine;
+    private _offset;
+    private _ctrlKey;
+    private _metaKey;
+    private _propPath;
+    private _3dPoints;
+    private _points;
+    private _curHoverInHandleType;
+    private _curHoverInElemIndex;
+    private _isDeletePointKeyDown;
+    get isDeletePointKeyDown(): boolean;
+    set isDeletePointKeyDown(value: boolean);
+    get curHoverInHandleType(): string;
+    set curHoverInHandleType(value: string);
+    highlightDeleteLine(active: boolean): void;
+    init(): void;
+    onShow(): void;
+    onHide(): void;
+    createController(): void;
+    onControllerMouseDown(): void;
+    onControllerMouseMove(event: IControlMouseEvent): void;
+    onControllerMouseUp(): void;
+    onControllerHoverIn(event: IControlMouseEvent): void;
+    onControllerHoverOut(event: IControlMouseEvent): void;
+    onKeyDown(event: ISceneKeyboardEvent): void;
+    onKeyUp(event: ISceneKeyboardEvent): void;
+    worldToLocalPos(out: Vec3, inPos: Vec3): void;
+    handleAreaMove(delta: Vec3): void;
+    handlePoints(handleMoveData: IPolygonHandleData): void;
+    updateControllerData(): void;
+    updateController(): void;
+    onTargetUpdate(): void;
+    onNodeChanged(): void;
+}
+export default PolygonCollider2DGizmo;
+//# sourceMappingURL=polygon-collider-2d-gizmo.d.ts.map

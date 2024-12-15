@@ -1,0 +1,1 @@
+{"version":3,"file":"state-interface.d.ts","sourceRoot":"","sources":["../../../../../source/script/3d/utils/state-machine/state-interface.ts"],"names":[],"mappings":"AAAA,UAAU,MAAM;IACZ,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,KAAK,CAAC,IAAI,EAAE,GAAG,GAAG,OAAO,CAAC,IAAI,CAAC,CAAC;IAChC,IAAI,IAAI,OAAO,CAAC,IAAI,CAAC,CAAC;CACzB;AAED,eAAe,MAAM,CAAC"}

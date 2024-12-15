@@ -1,0 +1,1 @@
+{"version":3,"file":"gizmo-icon.d.ts","sourceRoot":"","sources":["../../../../../../source/script/public/gizmos/components/sphere-light/gizmo-icon.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,IAAI,CAAC;AACjC,OAAO,EAAE,SAAS,EAAE,MAAM,SAAS,CAAC;AAEpC,cAAM,oBAAqB,SAAQ,SAAS,CAAC,WAAW,CAAC;IACrD,iBAAiB,UAAQ;IACzB,gBAAgB;IAOhB,gBAAgB;CAmBnB;AAED,eAAe,oBAAoB,CAAC"}

@@ -1,0 +1,1 @@
+/// <reference path="./engine/cc.d.ts"/>
