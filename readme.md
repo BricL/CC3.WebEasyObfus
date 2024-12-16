@@ -13,9 +13,6 @@
 > *（注：本插件主要對開源項目 [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator) 進行包裝。)*
 
 
-## DEMO (Host on itch.io)
-
-
 ## 安装方法
 
 1. 下载项目成 ZIP 文件。
