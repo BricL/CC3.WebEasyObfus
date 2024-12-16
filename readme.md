@@ -6,7 +6,7 @@
 
 <p align="center"><img src="./logo.jpg" width="256"></p>
 
-雖然 CC 在建置時已經做了些混淆，但為了不讓有心人一鍵帶走項目，進一步的保護就成了鋼需。與此同時，開發團隊的 "老闆" 會預期這是簡單勾勾、選選就完成事...，這就是 WebEasyObfus 要做的事。
+虽然 CC 在建置时已经做了些混淆，但为了不让有心人一键带走项目，进一步的保护就成了钢需。与此同时，开发团队的 "老板" 会预期这是简单勾勾、选选就完成事...，这就是 WebEasyObfus 要做的事。
 
 > *「走過路過，別錯過，點顆星星，支持我！」*
 
@@ -40,9 +40,9 @@
 
     * Enable：启用或关闭功能。
 
-        * 启用后，會對建置項目資料夾中 `${your_project_path}/build/web-mobile/assets/main/index.js` 進行混淆。 
+        * 启用后，会对建置项目资料夹中 `${your_project_path}/build/web-mobile/assets/main/index.js` 进行混淆。 
 
-    * Select Obfus Level：設定混淆的不同等級，主要分五個等級，等級越高混淆會徹底，檔案也會越大且執行效能會受點引響。
+    * Select Obfus Level：设定混淆的不同等级，主要分五个等级，等级越高混淆会彻底，档案也会越大且执行效能会受点引响。
 
         * 基础 (Minimal)，對 javascript-obfuscator 設定分別為：
 
