@@ -160,6 +160,12 @@
             }
             ```
 
+
+## CI/CD
+
+本插件天然支持 CI/CD，只需從 Build Panel 导出当前平台的构建选项配置为 json 文件，用于[命令行构建](https://docs.cocos.com/creator/3.8/manual/zh/editor/publish/publish-in-command-line.html)。
+
+
 ## 参考文献
 
 * [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator)
