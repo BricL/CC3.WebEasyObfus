@@ -3,8 +3,8 @@
     "package_version": 2,
     "name": "web-easy-obfus",
     "version": "1.0.0",
-    "author": "Cocos Creator",
-    "editor": ">=3.8.3",
+    "author": "ericlin09@gmail.com",
+    "editor": ">=3.8.0",
     "type": "module",
     "scripts": {
         "preinstall": "node ./scripts/preinstall.js",
