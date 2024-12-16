@@ -42,7 +42,7 @@
 
         * 启用后，会对建置项目资料夹中 `${your_project_path}/build/web-mobile/assets/main/index.js` 进行混淆。 
 
-    * Select Obfus Level：设定混淆的不同等级，主要分五个等级，等级越高混淆会彻底，档案也会越大且执行效能会受点引响。
+    * Select Obfus Level：混淆分为五个等级，等级越高，混淆程度越彻底，但文件体积会增大，执行性能可能略受影响。
 
         * 基础 (Minimal)，對 javascript-obfuscator 設定分別為：
 
