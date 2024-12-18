@@ -6,7 +6,7 @@ Just check and select, and you're done, Obfuscator code with WebEasyObfus is sim
 
 > *"Don’t just pass by, give it a try—hit a star and show your support!"*
 
-> *Note: This plugin mainly wraps the open-source project [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator).*
+> *Note：If you have any feedback on the plugin, please go to [Cocos 中文论坛](https://forum.cocos.org/t/topic/163849)*
 
 
 ## Installation
