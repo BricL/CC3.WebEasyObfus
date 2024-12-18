@@ -6,7 +6,7 @@
 
 <p align="center"><img src="./logo.jpg" width="256"></p>
 
-勾勾、选选就完事...讓 WebEasyObfus 來吧！混淆項目代码就这样简单。
+勾勾、选选就完事，WebEasyObfus 混淆項目代码就这样简单。
 
 > *「走過路過，別錯過，點顆星星，支持我！」*
 

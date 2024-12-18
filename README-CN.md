@@ -6,7 +6,7 @@
 
 <p align="center"><img src="./logo.jpg" width="256"></p>
 
-虽然 CC 在建置时已经做了些混淆，但为了不让有心人一键带走项目，进一步的保护就成了钢需。与此同时，开发团队的 "老板" 会预期这是简单勾勾、选选就完成事...，这就是 WebEasyObfus 要做的事。
+勾勾、选选就完事，WebEasyObfus 混淆項目代码就这样简单。
 
 > *「走過路過，別錯過，點顆星星，支持我！」*
 
@@ -164,7 +164,6 @@
                 "disableConsoleOutput": true 
             }
             ```
-
 
 ## CI/CD
 
