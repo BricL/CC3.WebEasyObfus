@@ -2,43 +2,43 @@
 
 ![Static Badge](https://img.shields.io/badge/Version-1.0.0-blue) ![Static Badge](https://img.shields.io/badge/CocosCreator-3.8.x-green) ![Static Badge](https://img.shields.io/badge/Tested_On-web-yellow)
 
-虽然 CC 在建置时已经做了些混淆，但为了不让有心人一键带走项目，进一步的保护就成了钢需。与此同时，开发团队的 "老板" 会预期这是简单勾勾、选选就完成事...，这就是 WebEasyObfus 要做的事。
+Just check and select, and you're done, Obfuscator code with WebEasyObfus is simple.
 
-> *「走過路過，別錯過，點顆星星，支持我！」*
+> *"Don’t just pass by, give it a try—hit a star and show your support!"*
 
-> *（注：本插件主要對開源項目 [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator) 進行包裝。)*
-
-
-## 安装方法
-
-1. 下载项目成 ZIP 文件。
-
-2. 解压后将内容复制到 `${your_project_path}/extensions/web-easy-obfus`。
-
-3. 打开终端
-
-     * 输入 `cd ${your_project_path}/extensions/web-zip-bundle`
-
-         * 安装扩展依赖包 `npm install`
-
-         * 构建扩展 `npm run build`
-
-4. 到 Editor 菜单 Extension -> Extension Manager -> Installed 启用 `web-easy-obfus`。
-
->(*注：安装方法也可参考官方文档 [【扩展 安装与分享】](https://docs.cocos.com/creator/3.8/manual/zh/editor/extension/install.html) 。*)
+> *Note: This plugin mainly wraps the open-source project [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator).*
 
 
-## 如何使用
+## Installation
 
-1. 到 Build Setting 新增 New Build Task 并选择平台 WebMobile/WebDesktop。到 Panel 中下拉找到 web-easy-obfus 选项。
+1. Download ZIP package from github.
 
-    * Enable：启用或关闭功能。
+2. Decompress the file and copy the contents to `${your_project_path}/extensions/web-easy-obfus`.
 
-        * 启用后，会对建置项目资料夹中 `${your_project_path}/build/web-mobile/assets/main/index.js` 进行混淆。 
+3. Open the terminal
 
-    * Select Obfus Level：混淆分为五个等级，等级越高，混淆程度越彻底，但文件体积会增大，执行性能可能略受影响。
+     * `cd ${your_project_path}/extensions/web-zip-bundle`
 
-        * 基础 (Minimal)，對 javascript-obfuscator 設定分別為：
+         * Enter `npm install`, install dependency packages.
+
+         * Enter `npm run build`, build the extension.
+
+4. Go to the Editor menu `Extension -> Extension Manager -> Installed` to active the extension.
+
+    >*Note：You can also check out the official docs for installation instructions. [【扩展 安装与分享】](https://docs.cocos.com/creator/3.8/manual/zh/editor/extension/install.html).*
+
+
+## How to Use
+
+1. Go to the Build Setting, add a Ner Build Task, and select the platform as WebModule or WebDesktop. In the Panel, scroll down to find the web-easy=obfus option.
+
+    * Enable：Turn on/off the extension.
+
+        * When enable, the extension will obfuscator `${your_project_path}/build/web-mobile/assets/main/index.js` in the build folder.
+
+    * Select Obfus Level：There are five levels of obfuscation. The higher the level, the more thorough the obfuscation, but the file size wil increase, and execution performance may be affected.
+
+        * Minimal，The settings for javascript-obfuscator are as folloes:
 
             ```javascript
             {
@@ -55,7 +55,7 @@
             }
             ```
 
-        * 标准 (Standard)，對 javascript-obfuscator 設定分別為：
+        * Standard，The settings for javascript-obfuscator are as folloes:
 
             ```javascript
             {
@@ -74,7 +74,7 @@
             }
             ```
 
-        * 增强 (Enhanced)，對 javascript-obfuscator 設定分別為：
+        * Enhanced，The settings for javascript-obfuscator are as folloes:
 
             ```javascript
             {
@@ -101,7 +101,7 @@
             }
             ```
 
-        * 安全 (Secure)，對 javascript-obfuscator 設定分別為：
+        * Secure，The settings for javascript-obfuscator are as folloes:
 
             ```javascript
             {
@@ -128,7 +128,7 @@
             }
             ```
 
-        * 极致 (Ultimate)，對 javascript-obfuscator 設定分別為：
+        * Ultimate，The settings for javascript-obfuscator are as folloes:
 
             ```javascript
             {
@@ -159,13 +159,12 @@
             }
             ```
 
-
 ## CI/CD
 
-本插件天然支持 CI/CD，只需從 Build Panel 导出当前平台的构建选项配置为 json 文件，用于[命令行构建](https://docs.cocos.com/creator/3.8/manual/zh/editor/publish/publish-in-command-line.html)。
+This exrension natively supports CI/CD. Export the current platform's build config as a JSON file from the Build Panel for [命令行构建](https://docs.cocos.com/creator/3.8/manual/zh/editor/publish/publish-in-command-line.html)。
 
 
-## 参考文献
+## References
 
 * [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator)
 
