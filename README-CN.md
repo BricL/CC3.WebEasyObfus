@@ -10,7 +10,7 @@
 
 > *「走過路過，別錯過，點顆星星，支持我！」*
 
-> *（注：对插件的意见反馈请至 [Cocos 中文论坛](https://forum.cocos.org/t/topic/163849)。）*
+> *（注：对插件的意见反馈请至 [Cocos 中文论坛](https://forum.cocos.org/t/topic/164539)。）*
 
 
 ## 安装方法
