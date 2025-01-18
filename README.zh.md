@@ -1,6 +1,6 @@
 # CC3.WebEasyObfus
 
-![Static Badge](https://img.shields.io/badge/Version-1.0.1-blue) ![Static Badge](https://img.shields.io/badge/CocosCreator-3.8.x-green) ![Static Badge](https://img.shields.io/badge/Tested_On-web-yellow)
+![Static Badge](https://img.shields.io/badge/Version-1.0.2-blue) ![Static Badge](https://img.shields.io/badge/CocosCreator-3.8.x-green) ![Static Badge](https://img.shields.io/badge/Tested_On-web-yellow)
 
 
 虽然 CC 在建置时已经做了些混淆，但为了不让有心人一键带走项目，进一步的保护就成了钢需。与此同时，开发团队的 "老板" 会预期这是简单勾勾、选选就完成事...，这就是 WebEasyObfus 要做的事。
