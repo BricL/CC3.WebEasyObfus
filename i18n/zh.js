@@ -3,6 +3,7 @@ module.exports = {
     description: "混淆項目代码就这样简单!",
     options: {
         enable: "启用",
+        includeAllBundle: "包含所有Bundle",
         selectObfusLevel: "选择混淆等级",
         selectObfusLevelDescription: "",
         selectObfusLevelOptions: {

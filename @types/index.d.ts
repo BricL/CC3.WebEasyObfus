@@ -28,6 +28,7 @@ export interface ICustomPanelThis extends IPanelThis {
 
 export interface IOptions {
     enable: boolean;
+    includeAllBundle: boolean;
     selectObfusLevel: string;
 }
 

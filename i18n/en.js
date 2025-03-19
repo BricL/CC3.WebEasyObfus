@@ -3,6 +3,7 @@ module.exports = {
     description: "Easily obfuscate the project codebase!",
     options: {
         enable: "Enable",
+        includeAllBundle: "Include All Bundle",
         selectObfusLevel: "Select Obfus Level",
         selectObfusLevelDescription: "",
         selectObfusLevelOptions: {

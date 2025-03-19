@@ -87,48 +87,12 @@ export const onAfterBuild: BuildHook.onAfterBuild = async function (options: ITa
         }
 
         const BUILD_DEST_DIR = result.dest;
-        const targetFilePaths = [];
 
-        // 針對 assets/main/index.js 進行 obfuscation
-        const mainFilePath = path.join(BUILD_DEST_DIR, 'assets', 'main');
-        console.log('BUILD_DEST_DIR main:', mainFilePath);
-        targetFilePaths.push({ filePath: mainFilePath, key: 'index' });
-
-        // 針對 src/chunks/bundle.js 進行 obfuscation
-        const bundleFilePath = path.join(BUILD_DEST_DIR, 'src', 'chunks');
-        console.log('BUILD_DEST_DIR bundle:', bundleFilePath);
-        targetFilePaths.push({ filePath: bundleFilePath, key: 'bundle' });
-
-        // 進行 obfuscation...
-        targetFilePaths.forEach((data) => {
-            const filePath = data.filePath;
-            const key = data.key;
-
-            searchFile(filePath, key, (err, files) => {
-                if (err) {
-                    console.error(err);
-                    return;
-                }
-                console.log('Found files:', files);
-
-                fs.readFile(files[0], 'utf8', (err, data) => {
-                    if (err) {
-                        console.error(err);
-                        return;
-                    }
-
-                    const obfuscatedData = JavaScriptObfuscator.obfuscate(data, obfuscationOptions).getObfuscatedCode();
-
-                    fs.writeFile(files[0], obfuscatedData, (err) => {
-                        if (err) {
-                            console.error(err);
-                            return;
-                        }
-                        console.log('File obfuscated and saved successfully.');
-                    });
-                });
-            });
-        });
+        if (pkgOptions.includeAllBundle) {
+            findAndObfusJSFile(path.join(BUILD_DEST_DIR, 'assets'), obfuscationOptions);
+        } else {
+            findAndObfusJSFile(path.join(BUILD_DEST_DIR, 'assets', 'main'), obfuscationOptions);
+        }
     }
 };
 
@@ -148,45 +112,34 @@ export const onAfterMake: BuildHook.onAfterMake = async function (root, options)
 
 };
 
-function searchFile(dir: string, searchTerm: string, callback: (err: Error | null, result?: string[]) => void) {
-    fs.readdir(dir, (err, files) => {
-        if (err) {
-            callback(err);
-            return;
-        }
+function findAndObfusJSFile(dir: string, options: any): boolean {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+        const fullPath = path.join(dir, item);
+        if (fs.lstatSync(fullPath).isDirectory()) {
+            findAndObfusJSFile(fullPath, options);
+        } else if (item.endsWith('.js')) {
+            console.log('Found js-file:', fullPath);
 
-        let results: string[] = [];
-        let pending = files.length;
-
-        if (!pending) {
-            callback(null, results);
-            return;
-        }
-
-        files.forEach(file => {
-            const filePath = path.join(dir, file);
-            fs.stat(filePath, (err, stats) => {
+            fs.readFile(fullPath, 'utf8', (err, data) => {
                 if (err) {
-                    callback(err);
+                    console.error(err);
                     return;
                 }
 
-                if (stats.isDirectory()) {
-                    searchFile(filePath, searchTerm, (err, res) => {
-                        if (err) {
-                            callback(err);
-                            return;
-                        }
-                        results = results.concat(res || []);
-                        if (!--pending) callback(null, results);
-                    });
-                } else {
-                    if (file.includes(searchTerm)) {
-                        results.push(filePath);
+                const obfuscatedData = JavaScriptObfuscator.obfuscate(data, options).getObfuscatedCode();
+
+                fs.writeFile(fullPath, obfuscatedData, (err) => {
+                    if (err) {
+                        console.error(err);
+                        return;
                     }
-                    if (!--pending) callback(null, results);
-                }
+                    console.log('Obfuscated:', fullPath);
+                });
             });
-        });
-    });
+
+            return true;
+        }
+    }
+    return false;
 }

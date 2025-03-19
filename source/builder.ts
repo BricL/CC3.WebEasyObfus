@@ -19,6 +19,14 @@ const webEasyObfusConfig = {
                 ui: 'ui-checkbox',
             }
         },
+        includeAllBundle: {
+            label: `i18n:${PACKAGE_NAME}.options.includeAllBundle`,
+            description: `i18n:${PACKAGE_NAME}.options.includeAllBundle`,
+            default: true,
+            render: {
+                ui: 'ui-checkbox',
+            }
+        },
         selectObfusLevel: {
             label: `i18n:${PACKAGE_NAME}.options.selectObfusLevel`,
             description: `i18n:${PACKAGE_NAME}.options.selectObfusLevelDescription`,
