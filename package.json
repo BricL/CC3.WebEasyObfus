@@ -2,7 +2,7 @@
     "$schema": "./@types/schema/package/index.json",
     "package_version": 2,
     "name": "web-easy-obfus",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "author": "ericlin09@gmail.com",
     "editor": ">=3.7.1",
     "type": "module",
