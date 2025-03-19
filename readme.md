@@ -41,7 +41,9 @@ Just check and select, and you're done, Obfuscator code with WebEasyObfus is sim
 
     * Enable：Turn on/off the extension.
 
-        * When enable, the extension will obfuscator `${your_project_path}/build/web-mobile/assets/main/index.js` in the build folder.
+    * Include All Bundle
+
+        * Check this: all bundle JS files will be obfuscated; otherwhile, only `assets/main/bundle.js` will be obfuscated.
 
     * Select Obfus Level：There are five levels of obfuscation. The higher the level, the more thorough the obfuscation, but the file size wil increase, and execution performance may be affected.
 

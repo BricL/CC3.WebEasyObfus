@@ -40,7 +40,9 @@
 
     * Enable：启用或关闭功能。
 
-        * 启用后，会对建置项目资料夹中 `${your_project_path}/build/web-mobile/assets/main/index.js` 进行混淆。 
+    * Include All Bundle: 包含所有Bundle
+
+        * 启用后，所有 Bundle 内的 JS 档案将进行混淆，否则只有 `assets/main/bundle.js` 下的JS档案将进行混淆。
 
     * Select Obfus Level：混淆分为五个等级，等级越高，混淆程度越彻底，但文件体积会增大，执行性能可能略受影响。
 
